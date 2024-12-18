@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -19,6 +20,7 @@ public class Mul extends AppCompatActivity {
     EditText md1,md2;
     String e1,e2,e3;
     Integer r1,r2,r3;
+    TextView r5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public class Mul extends AppCompatActivity {
         m2=(Button) findViewById(R.id.mb2);
         md1=(EditText) findViewById(R.id.me1);
         md2=(EditText) findViewById(R.id.me2);
+        r5=(TextView) findViewById(R.id.t3);
 
         m2.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,6 +51,7 @@ public class Mul extends AppCompatActivity {
                 r3=r1*r2;
                 e3=String.valueOf(r3);
                 Toast.makeText(getApplicationContext(),e3,Toast.LENGTH_LONG).show();
+                r5.setText(e3);
             }
         });
     }

@@ -52,4 +52,13 @@
         android:layout_height="wrap_content"
         android:text="Go Back To Menu "
         android:layout_margin="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:id="@+id/t3"/>
+    />
 </LinearLayout>
