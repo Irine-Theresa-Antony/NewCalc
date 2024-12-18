@@ -14,45 +14,46 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Mul extends AppCompatActivity {
+public class Div extends AppCompatActivity {
 
-    Button m1,m2;
-    EditText md1,md2;
+    Button d1,d2;
+    EditText dd1,dd2;
     String e1,e2,e3;
     Integer r1,r2,r3;
-    TextView r5;
-
+    TextView r4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_mul);
-        m1=(Button) findViewById(R.id.mb1);
-        m2=(Button) findViewById(R.id.mb2);
-        md1=(EditText) findViewById(R.id.me1);
-        md2=(EditText) findViewById(R.id.me2);
-        r5=(TextView) findViewById(R.id.t3);
+        setContentView(R.layout.activity_div);
 
-        m2.setOnClickListener(new View.OnClickListener() {
+        d1=(Button) findViewById(R.id.db1);
+        d2=(Button) findViewById(R.id.db2);
+        dd1=(EditText) findViewById(R.id.de1);
+        dd2=(EditText) findViewById(R.id.de2);
+        r4=(TextView) findViewById(R.id.t4);
+
+        d2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mob1=new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(mob1);
+                Intent dob1=new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(dob1);
             }
         });
 
-        m1.setOnClickListener(new View.OnClickListener() {
+        d1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                e1=md1.getText().toString();
-                e2=md2.getText().toString();
+                e1=dd1.getText().toString();
+                e2=dd2.getText().toString();
                 r1=Integer.parseInt(e1);
                 r2=Integer.parseInt(e2);
-                r3=r1*r2;
+                r3=r1/r2;
                 e3=String.valueOf(r3);
                 Toast.makeText(getApplicationContext(),e3,Toast.LENGTH_LONG).show();
-                r5.setText(e3);
+                r4.setText(e3);
             }
         });
+
     }
 }
